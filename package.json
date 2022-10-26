@@ -1,26 +1,29 @@
-
 {
   "name": "bfi-sass-test",
   "description": "A simple vuejs Hello World plugin",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "private": false,
-  "keywords": ["keywords", "go", "here"],
+  "keywords": [
+    "keywords",
+    "go",
+    "here"
+  ],
   "author": {
-        "name": "Jihara Guiapal",
-        "email": "jiharaguiapal1772@gmail.com"
-    },
+    "name": "Jihara Guiapal",
+    "email": "jiharaguiapal1772@gmail.com"
+  },
   "repository": "https://github.com/jiharaguiapal/publish-test",
   "license": "MIT",
-  "files": ["dist/*.css"],
+  "files": [
+    "dist/*.css"
+  ],
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "build-library" : "vue-cli-service build --target lib --name vue-hello-world-simple ./src/install.js",
+    "build-library": "vue-cli-service build --target lib --name vue-hello-world-simple ./src/install.js",
     "lint": "vue-cli-service lint"
-
   },
-  "main" : ".dist/vue-hello-world-simple.common.js",
-
+  "main": ".dist/vue-hello-world-simple.common.js",
   "dependencies": {
     "core-js": "^3.8.3",
     "vue": "^2.6.14",
