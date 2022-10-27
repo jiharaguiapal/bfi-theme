@@ -1,12 +1,14 @@
 {
-  "name": "bfi-sass-test",
-  "description": "A simple vuejs Hello World plugin",
-  "version": "0.1.6",
+  "name": "bfi-style",
+  "description": "Colors and fonts for BFI",
+  "version": "0.1.7",
   "private": false,
   "keywords": [
-    "keywords",
-    "go",
-    "here"
+    "css",
+    "scss",
+    "biotech",
+    "Biotech",
+    "BFI"
   ],
   "author": {
     "name": "Jihara Guiapal",
@@ -15,7 +17,7 @@
   "repository": "https://github.com/jiharaguiapal/publish-test",
   "license": "MIT",
   "files": [
-    "src"
+    "scss"
   ],
   "scripts": {
     "serve": "vue-cli-service serve",

@@ -1,26 +1,42 @@
-# vue-hello-world-simple
+# bfi-sass-test
 
-## Project setup
-```
-npm install
-```
+## Install
 
-### Compiles and hot-reloads for development
 ```
-npm run serve
+npm install bfi-style
 ```
 
-### Compiles and minifies for production
+```
+Note that installing as a dev dependency --save-dev or -D will not work correctly.
+
+```
+
+### Usage
+
+```
+Go to nuxt.config.js
+Add to global css
+
+    css: ["./node_modules/bfi-style/scss/style.scss"],
+    plugins: [],
+
+
+```
+
+<!-- ### Compiles and minifies for production
+
 ```
 npm run build
 ```
 
 ### Lints and fixes files
+
 ```
 npm run lint
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
-"# publish-test" 
-"# publish-test" 
+### Customize configuration -->
+
+<!-- See [Configuration Reference](https://cli.vuejs.org/config/).
+"# publish-test"
+"# publish-test" -->
