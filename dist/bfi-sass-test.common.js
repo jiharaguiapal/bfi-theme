@@ -1,14 +1,4 @@
-(function webpackUniversalModuleDefinition(root, factory) {
-	if(typeof exports === 'object' && typeof module === 'object')
-		module.exports = factory();
-	else if(typeof define === 'function' && define.amd)
-		define([], factory);
-	else if(typeof exports === 'object')
-		exports["vue-hello-world-simple"] = factory();
-	else
-		root["vue-hello-world-simple"] = factory();
-})((typeof self !== 'undefined' ? self : this), function() {
-return /******/ (function() { // webpackBootstrap
+/******/ (function() { // webpackBootstrap
 /******/ 	"use strict";
 /******/ 	// The require scope
 /******/ 	var __webpack_require__ = {};
@@ -74,7 +64,7 @@ if (typeof window !== 'undefined') {
 // Indicate to webpack that this file can be concatenated
 /* harmony default export */ var setPublicPath = (null);
 
-;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/HelloWorld.vue?vue&type=template&id=64c5a022&scoped=true&
+;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/HelloWorld.vue?vue&type=template&id=64c5a022&scoped=true&
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -192,7 +182,7 @@ var staticRenderFns = [function () {
 
 ;// CONCATENATED MODULE: ./src/components/HelloWorld.vue?vue&type=template&id=64c5a022&scoped=true&
 
-;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/HelloWorld.vue?vue&type=script&lang=js&
+;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/HelloWorld.vue?vue&type=script&lang=js&
 /* harmony default export */ var HelloWorldvue_type_script_lang_js_ = ({
   name: "HelloWorld",
   props: {
@@ -201,7 +191,7 @@ var staticRenderFns = [function () {
 });
 ;// CONCATENATED MODULE: ./src/components/HelloWorld.vue?vue&type=script&lang=js&
  /* harmony default export */ var components_HelloWorldvue_type_script_lang_js_ = (HelloWorldvue_type_script_lang_js_); 
-;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-64.use[0]!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-64.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-64.use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-64.use[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/HelloWorld.vue?vue&type=style&index=0&id=64c5a022&prod&scoped=true&lang=scss&
+;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-22.use[0]!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-22.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-22.use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-22.use[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/HelloWorld.vue?vue&type=style&index=0&id=64c5a022&prod&scoped=true&lang=scss&
 // extracted by mini-css-extract-plugin
 
 ;// CONCATENATED MODULE: ./src/components/HelloWorld.vue?vue&type=style&index=0&id=64c5a022&prod&scoped=true&lang=scss&
@@ -346,8 +336,7 @@ if (typeof window !== "undefined" && window.Vue) {
 /* harmony default export */ var entry_lib = (install);
 
 
-/******/ 	return __webpack_exports__;
+module.exports = __webpack_exports__;
 /******/ })()
 ;
-});
-//# sourceMappingURL=vue-hello-world-simple.umd.js.map
+//# sourceMappingURL=bfi-sass-test.common.js.map

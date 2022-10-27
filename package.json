@@ -15,12 +15,12 @@
   "repository": "https://github.com/jiharaguiapal/publish-test",
   "license": "MIT",
   "files": [
-    "dist/*.css"
+    "src/*.scss"
   ],
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "build-library": "vue-cli-service build --target lib --name vue-hello-world-simple ./src/install.js",
+    "build-library": "vue-cli-service build --target lib --name bfi-sass-test ./src/install.js",
     "lint": "vue-cli-service lint"
   },
   "main": ".dist/vue-hello-world-simple.common.js",
