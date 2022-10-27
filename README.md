@@ -1,4 +1,4 @@
-# bfi-sass-test
+# bfi-style
 
 ## Install
 
