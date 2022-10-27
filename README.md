@@ -1,4 +1,4 @@
-# bfi-style
+# bfi-rectrack-style
 
 ## Install
 

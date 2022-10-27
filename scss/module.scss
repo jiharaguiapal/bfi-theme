@@ -1,0 +1,657 @@
+@font-face {
+  font-family: font_R;
+  src: url(red-hat-display.ttf);
+}
+
+@font-face {
+  font-family: font_M;
+  src: url(red-hat-display-medium.ttf);
+}
+
+@font-face {
+  font-family: font_B;
+  src: url(red-hat-display-bold.ttf);
+}
+
+@font-face {
+  font-family: font_BL;
+  src: url(red-hat-display-black.ttf);
+}
+
+
+
+$BFI1: #00a651;
+$BFI2: #a6ce39;
+$BG: #eff8f4;
+
+$mainT: #193C2A;
+$subT: #6d7571;
+$subT_F: #6d757123;
+$faded: #e9ffe4;
+
+$colPos1: #5ABC44;
+$colPos1_F: #5abc442a;
+$colPos1_H: #3c882b;
+
+$colPos2:#00A651;
+$colPos2_F:#00a6501f;
+$colPos2_H:#007a3b;
+
+$colEdit: #EE8400;
+$colEdit_F: #ee830031;
+$colEdit_H: #c96e00;
+
+$colView:#2F6C82;
+$colView_F:#2f6c8223;
+$colView_H:#1e4e5f;
+
+$colReject: #E84D2E;
+$colReject_F: #e84d2e27;
+$colReject_H: #c4462c;
+
+$colBlacklist: #262C2C;
+$colBlacklist_F: #262c2c25;
+$colBlacklist_H: #161d1d;
+
+$colKeep: #5c7b7b;
+$colKeep_F: #5c7b7b23;
+$colKeep_H: #405353;
+
+$colAlert: #FEC006;
+$colAlert_F: #fec00650;
+$colAlert_H: #d19d00;
+
+$colInfos: #1fbbeb;
+$colInfos_F: #64dbff48;
+$colInfos_H: #008fbb;
+
+$colAdmin: #a6b8eb;
+$colAdmin_F: #a6bceb48;
+$colAdmin_H: #2854a5;
+
+.moduleContainer {
+  background: $BG;
+  height: 100vh;
+  width: 100%;
+  display: block;
+}
+
+.module {
+  width: 100%;
+  height: fit-content;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.moduleContent {
+  background: white;
+  border-radius: 0 4px 4px 4px;
+  border-top: 3px solid $colPos2;
+  width: 100%;
+  height: fit-content;
+  padding: 20px;
+  transition-timing-function: ease-in-out;
+}
+
+.moduleContent2 {
+  background: white;
+  border-radius: 4px;
+  width: 100%;
+  height: fit-content;
+  padding: 20px;
+  border-top: 3px solid $colPos2;
+  transition-timing-function: ease-in-out;
+}
+
+@media only screen and (max-width: 1400px) {
+  .module {
+    width: 100%;
+    height: fit-content;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .moduleContent {
+    background: white;
+    border-radius: 0 4px 4px 4px;
+    border-top: 3px solid $colPos2;
+    width: 100%;
+    height: fit-content;
+    padding: 15px;
+  }
+
+  .moduleContent2 {
+    background: white;
+    border-radius: 4px;
+    width: 100%;
+    height: fit-content;
+    padding: 15px;
+  }
+}
+
+.tabs {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.tab {
+  width: fit-content;
+  white-space: nowrap;
+  background: white;
+  border-radius: 4px 4px 0 0;
+  margin-right: 3px;
+  padding-right: 20px;
+  padding-left: 20px;
+  transition: 0.2s;
+  color: $subT;
+  font-size: 14px;
+  white-space: nowrap;
+
+  &:hover {
+    background: $colPos2_F;
+    transition: 0.2s;
+    color: $colPos2;
+  }
+
+  &:active {
+    background: $colPos2;
+    color: white;
+  }
+}
+
+.tabAdd {
+  width: fit-content;
+  white-space: nowrap;
+  background: white;
+  border-radius: 4px 4px 0 0;
+  margin-right: 3px;
+  padding-right: 12px;
+  padding-left: 12px;
+  transition: 0.2s;
+  color: $subT;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.tabClose {
+  display: inline;
+  padding-left: 10px;
+
+  // border: 1px solid red;
+  &:hover {
+    color: $colReject;
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  .tabs {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: 34px;
+  }
+
+  .tab {
+    width: fit-content;
+    white-space: nowrap;
+    background: white;
+    border-radius: 4px 4px 0 0;
+    margin-right: 3px;
+    padding-right: 15px;
+    padding-left: 15px;
+    transition: 0.2s;
+    color: $subT;
+    font-size: 12px;
+    white-space: nowrap;
+
+    &:hover {
+      background: $colPos2_F;
+      transition: 0.2s;
+      color: $colPos2;
+    }
+
+    &:active {
+      background: $colPos2;
+      color: white;
+    }
+  }
+
+  .tabAdd {
+    width: fit-content;
+    white-space: nowrap;
+    background: white;
+    border-radius: 4px 4px 0 0;
+    margin-right: 3px;
+    padding-right: 12px;
+    padding-left: 12px;
+    transition: 0.2s;
+    color: $subT;
+    font-size: 12px;
+    white-space: nowrap;
+  }
+
+  .tabClose {
+    display: inline;
+    padding-left: 10px;
+
+    // border: 1px solid red;
+    &:hover {
+      color: $colReject;
+    }
+  }
+}
+
+.activeTab {
+  background: $colPos2;
+  color: white;
+
+  &:hover {
+    background: $colPos2;
+    color: white;
+  }
+}
+
+.moduleName {
+  font-size: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: font_B;
+  color: $mainT;
+  // margin-bottom: 15px;
+  // border: 1px solid red;
+}
+
+.tabTools {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0px;
+  // border: 1px solid red;
+  padding: 5px;
+}
+
+.tabToolsDiv {
+  // border: 1px solid pink;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+@media only screen and (max-width: 1400px) {
+  .moduleName {
+    font-size: 20px;
+    font-family: font_B;
+    color: $mainT;
+    // margin-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .tabTools {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    margin-top: 0px;
+  }
+
+  .tabToolsDiv {
+    // border: 1px solid pink;
+    padding-left: 5px;
+    padding-right: 5px;
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+  }
+}
+
+.tabToolsDivX {
+  width: 100%;
+  padding: 0;
+}
+
+.tabEx {
+  justify-content: flex-end;
+  padding-top: 16px;
+}
+
+.tabTable {
+  width: 100%;
+  height: fit-content;
+  margin-top: 10px;
+  font-size: 13px;
+
+}
+
+.table {
+  font-size: 13px;
+}
+
+@media only screen and (max-width: 1400px) {
+  .table {
+    font-size: 11px;
+  }
+}
+
+.table>tbody>tr {
+  align-items: center;
+
+  &:hover {
+    background-color: #a7e0c738;
+    ;
+  }
+}
+
+.table>tbody>tr.b-table-row-selected,
+.table>tbody>tr.b-table-row-selected>td,
+.table>tbody>tr.b-table-row-selected>th {
+  background-color: white !important
+}
+
+.b-table-details td {
+  padding-top: 0px;
+
+}
+
+.table-hover tbody tr:hover td,
+.table-hover tbody tr:hover th {
+  background-color: #f4f6f8;
+}
+
+.footer {
+  color: $subT;
+  font-size: 13px;
+  padding-top: 0px;
+  border-top: 2px solid #f5f5f5;
+}
+
+@media only screen and (max-width: 1400px) {
+  .footer {
+    color: $subT;
+    font-size: 13px;
+    padding-top: 10px;
+    border-top: 2px solid #f5f5f5;
+  }
+}
+
+// PAGINATION
+.page-item.active .page-link {
+  background-color: $colPos2 !important;
+  border-color: $colPos2 !important;
+  transition: 0.3s;
+
+  &:focus {
+    outline-width: 0;
+    outline-style: none;
+    outline: none;
+  }
+
+  &:active {
+    outline-width: 0;
+    outline-style: none;
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+.page-link {
+  &:focus {
+    outline-width: 0;
+    outline-style: none;
+    outline: none;
+    box-shadow: none;
+  }
+
+  &:active {
+    outline-width: 0;
+    outline-style: none;
+    outline: none;
+    box-shadow: none;
+    box-shadow: none;
+  }
+}
+
+.page-item .page-link {
+  color: $subT;
+}
+
+.fieldCon {
+  transition: 0.4s;
+
+  &:hover {
+    background: white;
+  }
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.fieldData {
+  border: 1px solid pink;
+
+  &:hover {
+    background: white;
+  }
+}
+
+.justify-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.b-table-details td {
+  padding: 0;
+  margin: 0;
+  height: 0;
+}
+
+.rowMenuScroll {
+  overflow-x: hidden;
+  overflow-y: auto;
+  max-height: 211px;
+  min-height: 35px;
+}
+
+@media only screen and (min-width: 1401px) {
+  .rowmenuHold {
+    z-index: 10;
+    position: absolute;
+    right: 120px;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    padding-top: 2px;
+    // border: 1px solid pink;
+  }
+
+  .rowmenu {
+    z-index: 11;
+    position: relative;
+    top: -60px;
+    left: 30px;
+    border-radius: 4px;
+    width: fit-content;
+    height: fit-content;
+    padding-bottom: 10px;
+    // padding-right: 10px;
+    background: white;
+    // border-right: 5px solid $colKeep;
+    box-shadow: 0px 0px 15px 0px #0000003f;
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  .rowmenuHold {
+    z-index: 10;
+    position: absolute;
+    right: 80px;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: fit-content;
+    width: fit-content;
+
+    padding-top: 1px;
+    // border: 1px solid pink;
+  }
+
+  .rowmenu {
+    z-index: 11;
+    position: relative;
+    top: -60px;
+    left: -10px;
+    border-radius: 4px;
+    width: fit-content;
+    height: fit-content;
+    padding-bottom: 10px;
+    // padding-right: 10px;
+    background: white;
+    // border-right: 5px solid $colKeep;
+    box-shadow: 0px 0px 10px 0px #0000003f;
+    display: block;
+  }
+
+  // .pointRight {
+  //     z-index: 11;
+  //     height: 0px;
+  //     width: -7px;
+  //     position: relative;
+  //     top: 3px;
+  //     left: 0px;
+  //     border-left: 10px solid $colKeep;
+  //     border-right: 0px solid transparent;
+  //     border-bottom: 10px solid transparent;
+  //     border-top: 10px solid transparent;
+  // }
+}
+
+.actionFor {
+
+  font-size: 10px;
+  font-weight: bold;
+  color: $mainT;
+  text-align: left;
+  width: 100%;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 5px;
+  z-index: -5;
+
+  cursor: pointer;
+}
+
+.pointing {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 280px;
+  height: fit-content;
+  background: white;
+  // border: 1px solid red;
+  color: $colKeep;
+}
+
+.pointing div {
+  font-size: 15px;
+  margin-top: 3px;
+  margin-bottom: 0px;
+  margin-left: 10px;
+  margin-right: 10px;
+  color: $colKeep;
+}
+
+.line {
+  width: 280px;
+  height: 7px;
+  border-bottom: 1px solid #c4c4c4;
+  margin-bottom: 10px;
+}
+
+.selectTab {
+  height: 0px;
+  width: 0px;
+  // border: 1px solid red;
+  // box-shadow: 0px 0px 7px 0px #0000003f;
+  position: relative;
+  top: -30px;
+  left: 30px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.tabList {
+  z-index: 99;
+  height: fit-content;
+  background: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 4px;
+  border-left: 5px solid $colKeep;
+  box-shadow: 0px 0px 7px 0px #0000003f;
+}
+
+.listArrow {
+  z-index: 100;
+  margin-top: 10px;
+  border-left: 0px;
+  border-right: 10px solid $colKeep;
+  border-bottom: 10px solid transparent;
+  border-top: 10px solid transparent;
+}
+
+.listT {
+  // border: 1px solid pink;
+  z-index: 99;
+  width: 230px;
+  padding: 10px 20px;
+  text-align: left;
+  transition: 0.4s;
+
+  &:hover {
+    background: $colPos2_F;
+    color: $colPos2;
+    transition: 0.4s;
+  }
+}
+
+.tabSize {
+  // border: 1px solid red;
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+}
+
+// TABLE
+.sam {
+  border-bottom: 0px solid red;
+}
+.bord .applname {
+  font-family: font_B !important;
+  color: $mainT;
+}

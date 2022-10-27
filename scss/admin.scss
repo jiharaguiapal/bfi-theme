@@ -1,0 +1,494 @@
+@font-face {
+  font-family: font_R;
+  src: url(red-hat-display.ttf);
+}
+
+@font-face {
+  font-family: font_M;
+  src: url(red-hat-display-medium.ttf);
+}
+
+@font-face {
+  font-family: font_B;
+  src: url(red-hat-display-bold.ttf);
+}
+
+@font-face {
+  font-family: font_BL;
+  src: url(red-hat-display-black.ttf);
+}
+
+$BFI1: #00a651;
+$BFI2: #a6ce39;
+$BG: #eff8f4;
+
+$mainT: #193C2A;
+$subT: #6d7571;
+$subT_F: #6d757123;
+$faded: #e9ffe4;
+
+$colPos1: #5ABC44;
+$colPos1_F: #5abc442a;
+$colPos1_H: #3c882b;
+
+$colPos2:#00A651;
+$colPos2_F:#00a6501f;
+$colPos2_H:#007a3b;
+
+$colEdit: #EE8400;
+$colEdit_F: #ee830031;
+$colEdit_H: #c96e00;
+
+$colView:#2F6C82;
+$colView_F:#2f6c8223;
+$colView_H:#1e4e5f;
+
+$colReject: #E84D2E;
+$colReject_F: #e84d2e27;
+$colReject_H: #c4462c;
+
+$colBlacklist: #262C2C;
+$colBlacklist_F: #262c2c25;
+$colBlacklist_H: #161d1d;
+
+$colKeep: #5c7b7b;
+$colKeep_F: #5c7b7b23;
+$colKeep_H: #405353;
+
+$colAlert: #FEC006;
+$colAlert_F: #fec00650;
+$colAlert_H: #d19d00;
+
+$colInfos: #1fbbeb;
+$colInfos_F: #64dbff48;
+$colInfos_H: #008fbb;
+
+$colAdmin: #a6b8eb;
+$colAdmin_F: #a6bceb48;
+$colAdmin_H: #2854a5;
+
+.deptIcn {
+  color: $colKeep;
+  margin-right: 10px;
+}
+
+.iconBtn {
+  cursor: pointer;
+  color: $subT;
+  left: -100px;
+  margin-left: auto;
+  margin-right: 0;
+  &:hover {
+    color: $colReject;
+  }
+}
+
+.modal {
+  padding: 20px !important;
+}
+.btn-plus {
+  border-radius: 0;
+  border: 0px;
+  width: 30px;
+  height: 30px;
+  color: white;
+  font-size: 13px;
+  border-radius: 4px;
+  padding: 0;
+  transition: 0.2s;
+background-color: $colPos2;
+
+  &:hover {
+    transition: 0.2s;
+  }
+}
+.btn-plus {
+  border-radius: 0;
+  border: 0px;
+  width: 30px;
+  height: 35px;
+  color: white;
+  font-size: 13px;
+  border-radius: 4px;
+  padding: 0;
+  transition: 0.2s;
+  background: $colPos2;
+
+  &:hover {
+    transition: 0.2s;
+    background: $colPos2_H;
+
+  }
+}
+.btn-minus {
+  border-radius: 0;
+  border: 0px;
+  width: 30px;
+  height: 35px;
+  color: white;
+  font-size: 13px;
+  border-radius: 4px;
+  padding: 0;
+  transition: 0.2s;
+  background: #cccccc;
+
+  &:hover {
+    transition: 0.2s;
+    background: #818181;
+
+  }
+}
+.rmvPadding  {
+padding: 0 ;
+// margin: 2px;
+text-align: right;
+}
+.radioBtn{
+    // padding: 4px;
+
+}
+.selectRadio {
+  width: 100%;
+  height: 30px;
+  background: white !important;
+  font-size: 11px;
+  // padding:  4px ;
+  // margin-bottom: 16px;
+
+}
+.uploadFileInput {
+  width: 100%;
+  height: 35px;
+  border-radius: 4px;
+  border: 0px;
+  border: 1px solid $subT_F;
+  background: white !important;
+  font-size: 11px;
+  padding: 8px 20px;
+  margin-bottom: 16px;
+
+  &:focus {
+    outline: hidden;
+    outline-width: 0;
+    outline-style: none;
+    background: $colPos1_F !important;
+    border: 1px solid $colPos1;
+  }
+}
+.uploadFileInput .custom-file-label::after {
+    height: 35px;
+    
+
+}
+.plusIcon{
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  margin: 0;
+}
+
+.modal-content {
+  border: none;
+  // border-top: $colPos2 2;
+  // margin-top: 200px;
+  color: $subT;
+
+}
+
+.modal-header {
+  border: none;
+  padding: 20px;
+  color: $colKeep;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: fit-content;
+}
+
+.deptTitleDiv {
+  text-align: left;
+}
+
+.inField {
+  border-radius: 100px;
+  font-size: 12px;
+  color: $mainT;
+  width: 250px;
+  height: 35px;
+}
+
+label {
+  margin: 0 !important;
+}
+
+.modal-body {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+
+.modal-footer {
+  border: none;
+  padding: 0 16px 16px 16px;
+}
+
+.mdlBody {
+  padding: 20px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.overLay {
+  position: fixed;
+  z-index: 1000;
+  background: #00000079;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.overlayDisplay {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  //   text-align: center;
+}
+
+.conContent {
+  background: white;
+  border-radius: 4px;
+  //   width: 500px;
+  height: fit-content;
+  padding: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  // position: absolute;
+  // top: 100px;
+  // left: 35%;
+  animation: jelly 0.5s;
+  //   border-top: $colView solid 8px;
+  //   border-bottom: $colView solid 8px;s
+  // border-left: $colView solid 5px;
+  // border: $colView solid 8px ;
+}
+
+.conHeader {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: font_M;
+  color: $mainT;
+}
+
+.conBody {
+  color: $subT;
+  font-size: 15px;
+  //   margin-top: 20px;
+  //   margin-bottom: 20px;
+}
+
+.conFooter {
+  text-align: right;
+}
+
+.conFooter button {
+  background: $colPos1;
+  width: 400px;
+  height: 35px;
+  margin-top: 6px;
+  // margin-bottom: 6px;
+  border-radius: 100px;
+  font-size: 13px;
+
+  &:hover {
+    background: $colPos2;
+  }
+
+}
+
+
+.closeBtn {
+  background: white;
+  width: 100px;
+  height: 35px;
+  margin-bottom: 8px;
+  border-radius: 100px;
+  font-size: 13px;
+  border: $colPos1 solid 2px;
+  color: $colPos1;
+
+  &:hover {
+    background: $colPos2;
+
+  }
+}
+.radioBtn{
+  font-size: 12px !important;
+    &:focus {
+      outline: hidden;
+      outline-width: 0;
+      outline-style: none;
+      background: $colPos2;
+      border: 1px solid $colPos2;
+    }
+}
+.selectInput{
+  width: 100% !important;
+  margin-bottom: 15px;
+  background: white !important;
+
+}
+.selectInput .multiselect__single {
+  width: 100% !important;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.selectInput .multiselect__tags  {
+  width: 100% !important;
+  border: 1px solid $subT_F !important;
+}
+// .multiselect__option {
+//   width: 100% !important;
+.selectInput .multiselect__content-wrapper{
+    min-width: 100% !important;
+    max-width: 100% !important;
+}
+  
+// ACTIONS
+.actionHold {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.actionHeader {
+  color: $mainT;
+  font-size: 16px;
+  font-weight: bold;
+
+  border-radius: 5px;
+  background: #fafafa;
+  margin-right: 0.5px;
+  margin-top: 15px;
+  padding: 10px 15px;
+}
+.inactiveT {
+  display: flex;
+  align-items: center;
+  background: #fafafa;
+  color: $subT;
+  width: 205px;
+  border-radius: 4px;
+  padding: 7px 12px;
+  transition: 0.3s;
+  margin-bottom: 10px;
+  white-space: nowrap;
+  font-size: 13px;
+  &:hover {
+    transition: 0.3s;
+    background: #e0e0e0;
+    color: $subT;
+  }
+  &:focus {
+    transition: 0.3s;
+    background: $colPos2;
+    color: white;
+  }
+  cursor: pointer;
+}
+.activeT {
+  display: flex;
+  align-items: center;
+  background: $colKeep_F;
+  width: 205px;
+  border-radius: 4px;
+  padding: 7px 12px;
+  transition: 0.3s;
+  margin-bottom: 10px;
+  white-space: nowrap;
+  font-size: 13px;
+  cursor: pointer;
+}
+.col1, .col2 {
+  height: 500px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.col3, .col4 {
+  height: 400px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.grouper3 {
+  background: #fafafa;
+  // border: 1px solid red;
+  border-radius: 4px;
+  // margin-right: 5px;
+  // margin-left: 5px;
+  padding: 15px;
+  margin-right: 0.5px;
+  margin-top: 15px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.actions {
+  background: $colKeep_F;
+  border-radius: 4px;
+  width: 240px;
+  display: inline-block;
+  height: fit-content;
+  padding: 10px 15px;
+  font-size: 13px;
+  color: $colKeep_H;
+  transition: 0.3s;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  white-space: nowrap;
+  &:hover {
+    background: $colPos2_F;
+    transition: 0.3s;
+    color: $colPos2_H;
+  }
+  cursor: pointer;
+}
+.addActions {
+  margin: 0;
+  background: $colKeep;
+  color: white;
+  width: 17px;
+  height: 17px;
+  font-size: 12px;
+  &:hover {
+  }
+  cursor: pointer;
+}
+.actv {
+  color: white;
+  background: $colPos2;
+}
+.inactv {
+  color: white;
+  background: #c4c4c4;
+}
+.butn {
+  width: 16px;
+  height: 16px;
+  padding: 0;
+  border-radius: 4px;
+  font-size: 8px;
+}
+.note {
+  font-size: 12px;
+  padding: 10px 15px;
+  margin: 10px;
+  text-align: right;
+  font-weight: bold;
+  // color: $subT;
+  // border: 1px solid red;
+}
+.note2 {
+  font-size: 11px;
+  text-align: left;
+  color: $subT;
+  // border: 1px solid red;
+}

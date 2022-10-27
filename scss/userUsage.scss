@@ -1,0 +1,441 @@
+@font-face {
+    font-family: font_R;
+    src: url(red-hat-display.ttf);
+    }
+    
+    @font-face {
+    font-family: font_M;
+    src: url(red-hat-display-medium.ttf);
+    }
+    
+    @font-face {
+    font-family: font_B;
+    src: url(red-hat-display-bold.ttf);
+    }
+    
+    @font-face {
+    font-family: font_BL;
+    src: url(red-hat-display-black.ttf);
+    }
+    
+    $BFI1: #00a651;
+    $BFI2: #a6ce39;
+    $BG: #eff8f4;
+    
+    $mainT: #193C2A;
+    $subT: #6d7571;
+    $subT_F: #6d757123;
+    $faded: #e9ffe4;
+    
+    $colPos1: #5ABC44;
+    $colPos1_F: #5abc442a;
+    $colPos1_H: #3c882b;
+    
+    $colPos2:#00A651;
+    $colPos2_F:#00a6501f;
+    $colPos2_H:#007a3b;
+    
+    $colEdit: #EE8400;
+    $colEdit_F: #ee830031;
+    $colEdit_H: #c96e00;
+    
+    $colView:#2F6C82;
+    $colView_F:#2f6c8223;
+    $colView_H:#1e4e5f;
+    
+    $colReject: #E84D2E;
+    $colReject_F: #e84d2e27;
+    $colReject_H: #c4462c;
+    
+    $colBlacklist: #262C2C;
+    $colBlacklist_F: #262c2c25;
+    $colBlacklist_H: #161d1d;
+    
+    $colKeep: #5c7b7b;
+    $colKeep_F: #5c7b7b23;
+    $colKeep_H: #405353;
+    
+    $colAlert: #FEC006;
+    $colAlert_F: #fec00650;
+    $colAlert_H: #d19d00;
+    
+    $colInfos: #1fbbeb;
+    $colInfos_F: #64dbff48;
+    $colInfos_H: #008fbb;
+    
+    $colAdmin: #a6b8eb;
+    $colAdmin_F: #a6bceb48;
+    $colAdmin_H: #2854a5;
+
+    // USER USAGE DATA
+.usageCont {
+    display: flex;
+}
+.usageCont1, .usageCont2 {
+    // border: 1px solid red;
+    height: 555px;
+}
+.usageCont1 {
+    width: 373px;
+    margin-left: 15px;
+}
+.usageCont2 {
+    width: 1000px;
+    margin-right: 15px;
+    padding-left: 15px;
+}
+.usageContScroll {
+    // border: 1px solid red;
+    width: 725px;
+    height: 505px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.bord1 {
+    // border-bottom: 1px solid #6d7571;
+    white-space: nowrap;
+    font-size: 12px !important;
+}
+.dataRow {
+    width: 100%;
+    display: flex;
+}
+.dataCol, .dataColH {
+    width: fit-content;
+    white-space: nowrap;
+    padding: 5px 10px;
+}
+.dataCol {
+    font-size: 12px;
+    border: 1px solid white;
+    background: #fafafa;
+}
+.dataColH {
+    font-size: 14px;
+    font-weight: bold;
+    background: #eeeeee;
+    color: #193C2A;
+    border: 1px solid white;
+}
+.colW1 {
+    width: 100px;
+}
+.colW2 {
+    width: 180px;
+}
+.colW3 {
+    width: 440px;
+}
+.userName_usage {
+    font-size: 15px;
+}
+.fadeColor {
+    color: #b9b9b9;
+}
+.usageFooter {
+    // border: 1px solid red;
+    height: 60px;
+    display: flex;
+}
+.usageFoot1 {
+    // border: 1px solid red;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.usageFoot2 {
+    // border: 1px solid red;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.usageLoader {
+    width: 1140px;
+    height: 560px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.userUsageStatus {
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    text-align: center;
+    color: $colKeep_H;
+}
+.usageFoot2 button {
+    margin-left: 10px;
+}
+// SELECTING MONTHS AND YEAR INPUT
+.u_year, .u_month {
+    background: $colPos2;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    color: white;
+    font-size: 13px;
+    border: 0px;
+    padding: 6px;
+    border-radius: 50px;
+    margin-right: 6px;
+    transition: 0.4s;
+    &:hover {
+        transition: 0.4s;
+        background: $colPos2_H;
+    }
+}
+.u_join {
+    background: #fafafa;
+    width: 230px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 6px;
+}
+.u_monthHolder {
+    width: fit-content;
+    color: $colKeep_H;
+    cursor: pointer;
+    // border: 1px solid red;
+}
+.u_yearHolder {
+    width: 80px;
+    background: transparent !important;
+    color: $colKeep_H;
+    padding: 5px 10px !important;
+}
+.u_dayHolder {
+    width: fit-content;
+    text-align: center;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.u_months_cont {
+    width: 200px;
+    height: 430px;
+    background: white;
+    position: absolute;
+    left: 102px;
+    top: -340px;
+    box-shadow: 0px 0px 7px 0px #0000003f;
+    border-radius: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.u_days_cont {
+    background: white;
+    position: absolute;
+    left: 102px;
+    top: -240px;
+    width: 185px;
+    height: fit-content;
+    box-shadow: 0px 0px 7px 0px #0000003f;
+    border-radius: 5px;
+    padding: 5px;
+}
+.u_days_list {
+    // border: 1px solid red;
+    width: 35px;
+    height: 35px;
+    padding: 5px 10px;
+    color: $subT;
+    transition: 0.4s;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    &:hover {
+        transition: 0.4s;
+        background: $colView_F;
+    }
+}
+.u_months_list {
+    width: 100%;
+    height: 35px;
+    padding: 5px 25px;
+    color: $subT;
+    transition: 0.4s;
+    cursor: pointer;
+    &:hover {
+        transition: 0.4s;
+        background: $colView_F;
+    }
+}
+.u_hr_line {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+// FULL REPORT
+.userFName, .reportID {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 50%;
+}
+.reportID {
+    text-align: right;
+    font-size: 12px;
+    font-weight: normal;
+}
+.userRow, .userRowMain {
+    // border: 1px solid red;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border: 1px solid $subT;
+    border-right: 0px;
+    border-bottom: 0px;
+}
+.userRowMain {
+    border: 0px;
+}
+.borderBottom {
+    border-bottom: 1px solid $subT;
+}
+.userCol {
+    font-size: 12px;
+    // border: 1px solid pink;
+    width: 50%;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    border-right: 1px solid $subT;
+    padding-left: 4px;
+}
+.labelr {
+    font-weight: bold;
+    font-size: 13px;
+    width: 90px;
+    height: 100%;
+    border-right: 1px solid $subT;
+    padding-left: 4px;
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+.actRow {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.actCol {
+    border-left: 1px solid $subT;
+    border-top: 1px solid $subT;
+    width: 50%;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    padding-left: 4px;
+}
+.cSplit {
+    width: 75%;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    padding-left: 5px;
+    border-right: 1px solid $subT;
+    height: 100%;
+    font-weight: bold;
+}
+.cbg {
+    background: $colKeep_F;
+}
+.cen {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.totalA {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 50%;
+    font-weight: bold;
+    font-size: 14px;
+}
+.formData1 {
+    padding-top: 0px;
+    margin-top: 0px;
+}
+
+// ALL USER USAGE REPORT
+@page {
+    size: letter;
+    margin: .5in;
+}
+
+@media print {
+    table.paging thead td, table.paging tfoot td {
+        height: .4in;
+    }
+}
+
+
+@media print {
+    header, footer {
+        position: fixed;
+    }
+    footer {
+        bottom: 0;
+    }
+    .tab_head td.tab_name {
+        transform: translate(50, 1000px);
+    }
+}
+table.paging {
+    width: 100%;
+}
+table.paging tr td.tab_extra {
+    max-width: 40px;
+    min-width: 40px;
+}
+.tab_value {
+    width: 30px;
+    font-size: 12px;
+    border: 1px solid gray;
+    text-align: center;
+    padding: 6px;
+}
+thead, tbody, tfoot{
+    font-size: 12px;
+}
+.tab_no_border {
+    border: 0px !important;
+}
+.tab_head td {
+    color: black;
+    vertical-align: bottom !important;
+    padding-bottom: 15px;
+}
+.tab_name {
+    min-width: 200px;
+    height: 100%;
+    white-space: nowrap;
+    text-align: left;
+    padding-left: 10px;
+    text-transform: uppercase;
+}
+.tab_name_rotate {
+    white-space: nowrap;
+    transform: rotate(-45deg);
+}
+.formLogo1 {
+    width: 200px;
+    max-width: 100%;
+    height: auto;
+}
+.text_b {
+    font-weight: bold;
+}
+.text_b_nums {
+    font-weight: bold;
+    background: $colPos2_F;
+}
+
+

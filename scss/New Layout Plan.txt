@@ -1,0 +1,224 @@
+layouts
+    -> sideBar.vue
+
+components
+    -> dashboard
+        -> quickApplicants.vue                                          - ADMIN | OH | PG 
+            • View Resume
+            • Endorse To Other Department
+                - will put applicant to Received stage
+            • Keep For Reference
+                - will put applicant to Kept For Reference stage
+            • Blacklist
+            • Reject
+
+        -> received.vue                                                 - ADMIN | OH | PG | DH | TH
+            • View Resume
+            • Online Exam
+                - will put applicant to Online Exam stage
+            • Keep For Reference
+                - will put applicant to Kept For Reference stage
+            • Endorse For Assessment
+                - (if position does not require exams) this will put applicant to Schedule For Assessment stage
+            • Endorse To Other Department
+            • Blacklist
+            • Reject
+
+        -> onlineExam.vue                                               - ADMIN | OH | PG |  DH | TH
+            • View Resume
+            • Endorse To Other Department
+            • Retake
+                - will make applicant retake the exam
+            • Keep For Reference
+                - will put applicant to Kept For Reference stage
+            • Reject
+            
+        -> endorsement.vue ( if applicant is done with exams & IQBE)  - ADMIN | OH | PG |  DH | TH
+            • View Resume
+            • View Exam Results
+            • View IQBE Results                                       - ADMIN | OH | PG 
+            • Update Position                                         - ADMIN | OH | PG
+            • Endorse For Assessment
+                - will put applicant to Schedule For Assessment stage
+            • Keep For Reference
+                - will put applicant to Kept For Reference stage
+            • Reject
+
+        -> scheduleAssessment.vue ( if applicant has no assessment date) - ADMIN | OH | PG 
+            • View Resume
+            • View Exam Results
+            • View IQBE Results
+            • View Application Form
+            • Create Schedule
+                - will put applicant to Assessment stage - ADMIN | OH | PG 
+            • Keep For Reference
+            • Update Position                                           - ADMIN | OH | PG 
+            • Reject
+
+        -> assessment.vue                                               - ADMIN | OH | PG | DH | TH
+            • View Resume
+            • View Exam Results // if online_exam != null
+            • View IQBE Results // if done_IQBE !- false
+            • View Application Form
+            • Endorse To Other Department
+            • Update Position
+            • Rate IAF
+                - will put applicant to Pending For Review stage
+            • Keep For Reference
+            • Reject
+
+        -> pendingForReview.vue                                         - ADMIN | OH | PG | DH | TH
+            • View Resume
+            • View Applicatin Form
+            • Rate IAF - (optional: if other user has to rate as well)
+            • View IAF - (if applicant's IAF has been rated)
+            • Shortlist
+                - will put applicant to Shortlisted stage
+            • Keep For Reference
+                - will put applicant to Kept For Reference stage
+            • Reject
+
+        -> shortlisted.vue                                              - ADMIN | OH | PG | DH | TH
+            • View Resume
+            • View Applicatin Form
+            • View IAF
+            • Job Offer                                                     - ADMIN | OH | PG 
+                - will put applicant to JOb Offer stage
+
+        -> jobOffer.vue                                                 - ADMIN | OH | PG | DH | TH
+            • View Resume
+            • Deploy
+                - will put applicant to Deployed stage
+            • Keep For Reference
+                - will put applicant to Kept For Reference stage
+
+        -> deployed.vue                                                 - ADMIN | OH | PG | DH | TH
+            • View Resume
+            • View Exam Result
+            • Change Deployed date
+            • Add Referral
+
+        -> keptForReference.vue                                         - ADMIN | OH | PG | DH | TH
+            • View Resume
+            • View Exam Result 
+            • View IQBE Result
+            • Endorse To Other Department
+            • Endorse For Assessment
+            • Return Applicant
+                - will put applicant to a selected stage
+
+    -> onlineExam
+        -> questionaires
+            -> manageQuestions.vue
+
+        -> categories
+            -> manageCategories.vue
+
+        -> IQTest
+            -> manageIQTest.vue
+
+    -> exports
+        -> reports
+            -> deployed.vue
+            -> keptForReference.vue
+            -> blacklisted.vue
+            -> rejected.vue
+
+        -> joensoftExport
+            -> deployedApplicants.vue
+
+        -> referralForm
+            -> referrals.vue
+
+    -> walkInApplicant
+        -> walkInApply.vue
+
+pages
+    -> adminAccess                  - ADMIN
+        -> actions.vue
+        -> acessRights.vue
+        -> departments.vue
+        -> teams.vue
+        -> positions.vue
+        -> userAccoutns.vue
+        -> logs.vue
+
+    -> dashboard.vue                - ADMIN | OH | PG | TH | DH
+
+    -> onlineExam                   - ADMIN | OH | PG | TH | DH
+        -> questionaires.vue
+        -> categories.vue 
+        -> IQTest.vue               - ADMIN | OH | PG
+
+    -> exports                      - ADMIN | OH | PG | TH | DH
+        -> reports.vue
+        -> joensoftExport.vue       - ADMIN | OH | PG
+        -> referralForm.vue         - ADMIN | OH | PG
+
+    -> walkInApplicant.vue          - ADMIN | OH | PG
+
+
+    {
+        "user_id": Oh22,
+        "user": "Johny",
+        "action": "Endorse to other department",
+        "previous_stage": "Assessment",
+        "current_stage": "Endorsement",
+        "previous_department": "ITG",
+        "current_department": "Accounting",
+        "applicant_id": "567", 
+        "applicant": "Clara",
+        "date": "04/12/2020 02:08:29 PM"
+    }
+
+    {
+        "user_id": Oh22,
+        "user": "Johny",
+        "action": "Rejected",
+        "previous_stage": "Assessment",
+        "current_stage": "Rejected",
+        "previous_department": "ITG",
+        "current_department": "ITG",
+        "applicant_id": "567", 
+        "applicant": "Clara",
+        "date": "04/12/2020 04:08:29 PM"
+    }
+
+
+
+Notification Table
+
+Columns:
+    • userID
+    • userName
+    • applicantID
+    • applicantName
+    • notif (long text)
+    • actionID
+    • action
+    • is_viewed_by_admin:
+    • is_viewed_by_OH:
+    • is_viewed_by_PG:
+    • is_viewed_by_DH:
+    • is_viewed_by_TH:
+
+example:
+    • 1
+    • firstname lastname
+    • 842
+    • uziel mendoza dreisbach
+    • firstname lastname, endorsed uziel mendoza dreisbach to other department.
+    • 96
+    • Endorse to other Department
+    • firstname lastname, endorsed uziel mendoza dreisbach to other department.
+    • is_viewed_by_admin: true 
+    • is_viewed_by_OH: false (this means, di pa na open/view ni user ang notification)
+    • is_viewed_by_PG: false
+    • is_viewed_by_DH: false
+    • is_viewed_by_TH: false
+
+
+    
+
+
+

@@ -1,0 +1,1077 @@
+@font-face {
+    font-family: font_R;
+    src: url(red-hat-display.ttf);
+}
+@font-face {
+    font-family: font_M;
+    src: url(red-hat-display-medium.ttf);
+}
+@font-face {
+    font-family: font_B;
+    src: url(red-hat-display-bold.ttf);
+}
+@font-face {
+    font-family: font_BL;
+    src: url(red-hat-display-black.ttf);
+}
+
+$BFI1: #00a651;
+$BFI2: #a6ce39;
+$BG: #eff8f4;
+
+$mainT: #193C2A;
+$subT: #6d7571;
+$text: #858585;
+$subT_F: #6d757123;
+$faded: #e9ffe4;
+
+$colPos1: #5ABC44;
+$colPos1_F: #5abc442a;
+$colPos1_H: #3c882b;
+
+$colPos2:#00A651;
+$colPos2_F:#00a6501f;
+$colPos2_H:#007a3b;
+
+$colEdit: #EE8400;
+$colEdit_F: #ee830031;
+$colEdit_H: #c96e00;
+
+$colView:#2F6C82;
+$colView_F:#2f6c8223;
+$colView_H:#1e4e5f;
+
+$colReject: #E84D2E;
+$colReject_F: #e84d2e27;
+$colReject_H: #c4462c;
+
+$colBlacklist: #262C2C;
+$colBlacklist_F: #262c2c25;
+$colBlacklist_H: #161d1d;
+
+$colKeep: #5c7b7b;
+$colKeep_F: #5c7b7b23;
+$colKeep_H: #405353;
+
+// Hope this will prevent pull-to-refresh on mobile screens
+body .examWrapper {
+    // For Chrome 63+
+    overscroll-behavior: none;
+
+    // IF not using Chrome 63+ then;
+    // Break the flow
+    position: absolute;
+    top: 0px;
+    // Give them all the available space
+    width: 100%;
+    height: 100%;
+    // Remove the margins if any
+    margin: 0;
+    // Allow them to scroll down the document
+    overflow-y: hidden;
+    // Making the wrapper stack above the body
+    z-index: 5;
+}
+.timer {
+    color: $colKeep;
+    font-weight: bold;
+    font-size: 15px;
+    width: fit-content;
+    height: 38px;
+    text-align: left;
+    border-radius: 4px;
+    padding: 7px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background: $colKeep_F;
+
+    white-space: nowrap;
+}
+.timerWarn {
+    color: $colReject;
+    font-weight: bold;
+}
+.spacer {
+    width: 100%;
+    transition: 0.3s;
+}
+.scroller {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    transition: 0.3s;
+    padding-top: 20px;
+    padding-bottom: 200px;
+    // border: 1px solid red;
+}
+// Header
+.examHeader {
+    width: 100%;
+    padding: 5px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background: $colPos2_F;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.examTitle {
+    font-size: 20px;
+    color: $mainT;
+    font-weight: bold;
+    font-family: font_M;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    width: 85%;
+}
+.examInstruction {
+    color: $mainT;
+    font-size: 12px;
+    margin: auto;
+    width: 85%;
+}
+
+// General Instructions
+.genIns {
+    width: 100%;
+    // margin-bottom: 10px;
+    height: fit-content;
+    text-align: center;
+    // border: 1px solid red;
+    // overflow-x: hidden;
+    // overflow-y: scroll;
+    // transition: 0.3s;
+}
+.gen {
+    padding: 3px;
+    font-family: font_R;
+    color: $mainT;
+    font-weight: bold;
+    font-size: 13px;
+    // border: 1px solid pink;
+}
+.instLabel {
+    color: $mainT;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+}
+.instLabel div {
+    font-size: 14px;
+    font-weight: bold;
+    font-family: font_M;
+}
+
+.category {
+    width: 100%;
+    height: fit-content;
+    margin-bottom: 10px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}  
+.genCon {
+    margin: auto;
+    padding-bottom: 7px;
+    width: 85%;
+    text-align: left;
+}
+.genCon button {
+    border-radius: 4px;
+    padding-right: 20px;
+    padding-left: 20px;
+    font-size: 13px;
+    color: $mainT;
+    font-weight: bold;
+    background: $colPos2_F;
+    &:hover {
+        // background: $colPos2;
+        color: $colPos2;
+    }
+    margin-bottom: 10px;
+}
+.genCon .timer {
+    margin-bottom: 10px;
+}
+@media only screen and (min-width: 1000px) {
+    .genImg {
+        border: 1px solid $colKeep_F;
+        border-radius: 4px;
+        width: auto;
+        height: 110px;
+        margin-bottom: 10px;
+        cursor: pointer;
+    }
+}
+@media only screen and (max-width: 500px) {
+    .genImg {
+        border: 1px solid $colKeep_F;
+        border-radius: 4px;
+        width: 310px;
+        height: auto;
+        margin-bottom: 10px;
+        cursor: pointer;
+    }
+}
+@media only screen and (max-width: 320px) {
+    .genImg {
+        border: 1px solid $colKeep_F;
+        border-radius: 4px;
+        width: 250px;
+        height: auto;
+        margin-bottom: 10px;
+        cursor: pointer;
+    }
+}
+.questions .genCon {
+    font-size: 18px;
+    font-weight: bold;
+    font-family: font_M;
+    color: $mainT;
+}
+.indQuest {
+    padding: 8px;
+    border-radius: 4px;
+    background: $colKeep_F;
+    width: fit-content;
+    transition: 0.4s;
+}
+.indQArrow {
+    border-left: 0px solid transparent;
+    border-right: 9px solid $colKeep_F;
+    border-bottom: 9px solid transparent;
+    border-top: 9px solid transparent;
+    transition: 0.4s;
+}
+// FOOTER
+.footerFunc {
+    text-align: center;
+    background: white;
+}
+.footerFunc button {
+    border-radius: 4px;
+    padding-right: 20px;
+    padding-left: 20px;
+    font-size: 13px;
+    color: $mainT;
+    font-weight: bold;
+    background: $colPos2_F;
+    &:hover {
+        // background: $colPos2;
+        color: $colPos2;
+    }
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.footerFunc .footerFunc_position {
+    position: fixed;
+    bottom: 0px;
+    background: white;
+    width: 100%;
+    height: fit-content;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    // border: 1px solid red;
+    z-index: 1;
+}
+.yet {
+    font-size: 13px;
+    transition: 0.4s;
+    display: flex;
+    align-items: center;
+    color: $mainT;
+    font-weight: bold;
+}
+.answered {
+    color: $colPos2;
+}
+.collapseQuestions {
+    margin: auto;
+    padding: 10px;
+    width: 85%;
+    border-radius: 4px;
+    text-align: left;
+    transition: 0.4s;
+    background: #5c7b7b10;
+    margin-bottom: 20px;
+    &:hover {
+        transition: 0.4s;
+    }
+}
+.choicess {
+    width: 100%;
+    text-align: left;
+    font-size: 12px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 35px;
+    padding-top: 0;
+    padding-left: 35px;
+    cursor: pointer;
+    // padding-right: 35px;
+    // margin-right: 35px;
+    // border: 1px solid #f5f5f5;
+}
+.indChoice {
+    // border: 1px solid #f5f5f5;
+    width: fit-content;
+    white-space: nowrap;
+    padding-right: 35px;
+    // margin-right: 35px;
+    display: inline-block;
+}
+.inlineBlock {
+    display: inline-block;
+}
+.choiceHol {
+    padding-top: 11px;
+}
+@media only screen and (min-width: 1000px) {
+    .choiceHol {
+        width: 100%;
+        border-left: 2px solid $text;
+        // border: 1px solid #c4c4c4;
+        // display: block;
+        margin-left: 11px;
+        padding-left: 10px;
+    }
+}
+@media only screen and (max-width: 1000px) {
+    .choiceHol {
+        width: 100%;
+        border-left: 2px solid $text;
+        // border: 1px solid red;
+        margin-left: 11px;
+        padding-left: 10px;
+    }
+}
+.vLine {
+    width: 100%;
+    border-left: 2px solid $text;
+    margin-left: 11px;
+    margin-top: 20px;
+    transition: 0.4s;
+    height: 20px;
+}
+.vLine2 {
+    height: 20px;
+    width: 100%;
+    transition: 0.4s;
+    border-left: 2px solid $text;
+    margin-left: 11px;
+}
+.choiceNum {
+    max-width: 25px;
+    min-width: 25px;
+    height: 25px;
+    border: 2px solid $text;
+    color: $mainT;
+    transition: 0.4s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+    margin-right: 10px;
+    font-size: 11px;
+}
+.activeBG {
+    background: $colPos2;
+    border: 2px solid $colPos2;
+    color: white;
+}
+.activeBG2 {
+    background: $colPos2_F;
+    color: $colPos2;
+}
+.activeBG3 {
+    border-left: 0px solid transparent;
+    border-right: 9px solid $colPos2_F;
+    border-bottom: 9px solid transparent;
+    border-top: 9px solid transparent;
+}
+.activeBorder {
+    border-color: $colPos2;
+}
+.imgQuest {
+    height: 200px;
+    width: 1000px;
+    background-position: center;
+    background-size: 1000px;
+    background-repeat: no-repeat;
+    border-radius: 4px;
+    border: 1px solid #f5f5f5;
+    cursor: pointer;
+}
+.imgQuestHold {
+    // border-left: 2px solid $text;
+    margin-left: 11px;
+    margin-right: 50px;
+    margin-bottom: 11px;
+    padding-bottom: 11px;
+    width: 1000px;
+    // border: 1px solid red;
+}
+.cuteLabel {
+    font-style: italic;
+    font-size: 10px;
+    color: #c4c4c4;
+}
+.imgHold {
+    cursor: pointer;
+    height: 150px;
+    width: 250px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 4px;
+    border: 1px solid #f5f5f5;
+    margin-left: 11px;
+    margin-bottom: 11px;
+
+    object-fit: contain;
+}
+@media only screen and (max-width: 1400px) {
+    .imgHold {
+        cursor: pointer;
+        height: 150px;
+        width: 210px;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: 4px;
+        border: 1px solid #f5f5f5;
+        margin-left: 11px;
+        margin-bottom: 11px;
+
+        object-fit: contain;
+    }
+}
+@media only screen and (min-width: 1000px) {
+    .essayText {
+        border: 1px solid $text;
+        border-radius: 4px;
+        font-size: 12px;
+        font-family: font_R;
+        width: 700px;
+    }
+}
+@media only screen and (max-width: 1000px) {
+    .essayText {
+        border: 1px solid $text;
+        border-radius: 4px;
+        width: 250px;
+        font-size: 12px;
+        font-family: font_R;
+        margin-left: 11px;
+    }
+}
+@media only screen and (max-width: 320px) {
+    .essayText {
+        border: 1px solid $text;
+        border-radius: 4px;
+        width: 210px;
+        font-size: 12px;
+        font-family: font_R;
+    }
+    .imgQuest {
+        height: 150px;
+        width: 210px;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: 4px;
+        border: 1px solid #f5f5f5;
+        cursor: pointer;
+    }
+    .imgHold {
+        cursor: pointer;
+        height: 150px;
+        width: 210px;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: 4px;
+        border: 1px solid #f5f5f5;
+        margin-left: 11px;
+        margin-bottom: 11px;
+
+        object-fit: contain;
+    }
+}
+// ZOOM
+.zoomImage {
+    z-index: 100;
+    background: #00000057;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+.imageCon {
+    background: white;
+    border-radius: 4px;
+    width: fit-content;
+    height: fit-content;
+    padding: 5px;
+    text-align: center;
+}
+.imgZoom {
+    width: 950px;
+    max-height: 650px;
+    min-height: fit-content;
+    // border: 1px solid $subT;
+    border-radius: 4px;
+    overflow: scroll;
+}
+.zoomRange {
+    margin-top: 13px;
+    width: 300px;
+    display: none;
+}
+.closeZoom {
+    background: white;
+    border-radius: 4px;
+    width: 40px;
+    height: 40px;
+    margin: auto;
+    margin-right: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $subT;
+    font-size: 20px;
+    cursor: pointer;
+}
+@media only screen and (min-width: 1000px) {
+    .imgZoom img {
+        // border: 1px solid red;
+        width: 100%;
+        height: auto;
+    }
+}
+@media only screen and (max-width: 1000px) {
+    .zoomImage {
+        z-index: 100;
+        background: #00000057;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+    }
+    .imageCon {
+        background: white;
+        border-radius: 4px;
+        width: 100%;
+        height: 450px;
+        padding: 5px;
+        text-align: center;
+    }
+    .imgZoom {
+        height: 400px;
+        width: 100%;
+        // border: 1px solid $subT;
+        border-radius: 4px;
+        overflow: scroll;
+    }
+    .zoomRange {
+        margin: auto;
+        margin-top: 13px;
+        width: 300px;
+        display: block;
+    }
+    .closeZoom {
+        background: white;
+        border-radius: 4px;
+        width: 50px;
+        height: 50px;
+        margin: auto;
+        margin-top: 30px;
+        margin-right: -5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $subT;
+        font-size: 20px;
+    }
+}
+@media only screen and (max-width: 320px) {
+    .zoomImage {
+        z-index: 100;
+        background: #00000057;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+    }
+    .imageCon {
+        background: white;
+        border-radius: 4px;
+        width: 100%;
+        height: 400px;
+        padding: 5px;
+        text-align: center;
+    }
+    .imgZoom {
+        height: 350px;
+        width: 100%;
+        // border: 1px solid $subT;
+        border-radius: 4px;
+        overflow: scroll;
+    }
+    .zoomRange {
+        margin: auto;
+        margin-top: 13px;
+        width: 250px;
+        display: block;
+    }
+    .closeZoom {
+        background: white;
+        border-radius: 4px;
+        width: 50px;
+        height: 50px;
+        margin: auto;
+        margin-top: 20px;
+        margin-right: -5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $subT;
+        font-size: 20px;
+    }
+}
+// ANIMATION
+@-webkit-keyframes jelly {
+    0% {
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
+    30% {
+      -webkit-transform: scale3d(0.75, 1.25, 1);
+      transform: scale3d(0.75, 1.25, 1);
+    }
+    40% {
+      -webkit-transform: scale3d(1.25, 0.75, 1);
+      transform: scale3d(1.25, 0.75, 1);
+    }
+    50% {
+      -webkit-transform: scale3d(0.85, 1.15, 1);
+      transform: scale3d(0.85, 1.15, 1);
+    }
+    65% {
+      -webkit-transform: scale3d(1.05, 0.95, 1);
+      transform: scale3d(1.05, 0.95, 1);
+    }
+    75% {
+      -webkit-transform: scale3d(0.95, 1.05, 1);
+      transform: scale3d(0.95, 1.05, 1);
+    }
+    100% {
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
+  }
+
+//   APPLICATION FOMR
+.form_scroll {
+    height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+.form_BG {
+    background: $colPos2_F;
+    min-height: 100vh;
+    max-height: fit-content;
+    width: 100%;
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.form_logo {
+    min-width: 40px;
+    min-height: 40px;
+    margin-right: 20px;
+}
+.form_header {
+    background: white;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 60px;
+    padding: 8px 11px;
+    z-index: 10003;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    box-shadow: 0px 0px 7px 0px #0000003f;
+    white-space: nowrap;
+}
+.progressB {
+    border: 1px solid $colPos1;
+    height: 8px;
+    width: 100%;
+    border-radius: 100px;
+    text-align: left;
+    padding: 0px;
+}
+.Pbar {
+    transition: 0.5s;
+    height: 6px;
+    border-radius: 50px;
+    background: $colPos1;
+}
+.form_panel {
+    background: white;
+    width: 100%;
+    height: fit-content;
+    padding: 15px;
+    padding-left: 18px;
+    padding-right: 18px;
+    border-radius: 10px;
+    // box-shadow: 0px 0px 7px 0px #0000003f;
+    margin-bottom: 20px;
+}
+.form_panel_header, .form_panel_num {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.form_panel_header {
+    margin-bottom: 20px;
+    font-family: font_B;
+    color: $mainT;
+}
+.form_panel_num {
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    background: $colPos2;
+    color: white;
+    border-radius: 100px;
+    font-family: font_M;
+    margin-right: 18px;
+}
+.form_panel_content {
+    // padding: 5px;
+}
+.form_image_hold {
+    width: 100%;
+    height: fit-content;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.form_image {
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    border: 1px solid #f5f5f5;
+    margin: auto;
+}
+.form_panel_positive {
+    border-radius: 4px;
+    font-size: 12px;
+    color: white;
+    background: $colPos1;
+    margin-bottom: 20px;
+    height: 35px;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+}
+.form_panel_negative {
+    border-radius: 4px;
+    font-size: 12px;
+    height: 35px;
+    color: $subT !important;
+    background: $colBlacklist_F;
+    margin-bottom: 20px;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+}
+.form_panel_upload {
+    border-radius: 4px;
+    border: 0px;
+    background: $subT_F !important;
+    color: $mainT !important;
+    font-size: 12px;
+    padding-left: 20px !important;
+    width: 243px !important;
+    height: 35px !important;
+    border: 1px solid #CED4DA;
+    text-transform: uppercase;
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.extr {
+    margin-bottom: 15px;
+    margin-right: 15px;
+}
+.form_panel_input {
+    border-radius: 4px;
+    border: 0px;
+    background: white !important;
+    color: $mainT;
+    font-size: 12px;
+    padding: 3px 8px;
+    width: 243px;
+    height: 35px;
+    border: 1px solid #CED4DA;
+    text-transform: uppercase;
+}
+.disabled_input {
+    border-radius: 4px;
+    border: 0px;
+    background: #f5f5f5 !important;
+    color: $mainT;
+    font-size: 12px;
+    padding: 3px 8px;
+    width: 243px;
+    height: 35px;
+    border: 1px solid #CED4DA;
+    text-transform: uppercase;
+}
+.select_panel {
+    width: 243px;
+    height: 35px;
+    background: white;
+}
+.form_field {
+    height: fit-content;
+    display: inline-block;
+    margin-bottom: 15px;
+    width: 258px;
+}
+.form_field2 {
+    height: fit-content;
+    display: inline-block;
+    margin-bottom: 15px;
+    width: 100%;
+}
+.form_field3 {
+    height: fit-content;
+    display: inline-block;
+    margin-bottom: 15px;
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+.form_field4 {
+    height: fit-content;
+    display: inline-block;
+    margin-bottom: 15px;
+    width: 100%;
+    text-align: left;
+    margin-top: 20px;
+}
+.form_field4 .form_panel_input {
+    height: fit-content;
+    margin-bottom: 15px;
+    width: 50%;
+}
+.form_field4 .form_panel_inputExtra {
+    height: fit-content;
+    margin-bottom: 15px;
+    width: 50%;
+}
+.form_text {
+    max-width: 501px;;
+    min-height: 200px;
+    padding: 10px 12px;
+    font-size: 12px;
+    color: $mainT;
+}
+.field_label {
+    font-family: font_B;
+    font-size: 12px;
+    color: $mainT;
+    margin-bottom: 8px;
+}
+.field_label2 {
+    font-family: font_B;
+    font-size: 12px;
+    color: $mainT;
+    margin-top: 2px;
+}
+.field_label3 {
+    font-family: font_M;
+    font-size: 12px;
+    color: $mainT;
+    margin-top: 4px;
+}
+.field_notes {
+    font-family: font_M;
+    font-size: 11px;
+    color: $subT;
+    margin-bottom: 8px;
+}
+.ext {
+    display: inline-block;
+    margin-left: 10px;
+}
+.field_extra {
+    width: fit-content;
+}
+.panel_group {
+    border: 1px solid #c4c4c4;
+    border-radius: 4px;
+    padding: 5px;
+}
+.listing {
+    // border: 1px solid #c4c4c4;
+    background: #f5f5f5;
+    height: fit-content;
+    width: 501px;
+    border-radius: 4px;
+    display: inline-block;
+    padding: 8px 10px;
+    margin-bottom: 15px;
+    margin-right: 15px;
+}
+.listt {
+    font-size: 11px;
+    margin-bottom: 2px;
+}
+.footrList {
+    text-align: right;
+}
+.footrList button {
+    background: $colReject_F;
+    color: $colReject_H;
+    font-size: 10px;
+    height: 20px;
+    padding: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 4px;
+    margin-top: 15px;
+}
+.licenseImage {
+    border-radius: 4px;
+    border: 0px;
+    background: $subT_F;
+    color: $mainT;
+    font-size: 12px;
+    padding: 3px 8px;
+    width: 100%;
+    border: 1px solid #CED4DA;
+    text-transform: uppercase;
+
+    height: 35px !important;
+    // display: inline-block;
+    margin-right: 10px;
+}
+.header_divv {
+    width: 500px;
+}
+.header_divv span {
+    font-size: 18px;
+    font-family: font_B;
+    color: $mainT;
+    margin-bottom: 20px;
+
+}
+// .form_check {
+//     border: 1px solid red;
+// }
+// .form_check .custom-control-label, .field_label2 {
+//     border: 1px solid red;
+//     display: flex;
+//     align-items: flex-end;
+//     justify-content: flex-start;
+// }
+// FOR MOBILE
+@media only screen and (max-width: 1024px) {
+    .header_divv {
+        width: 100%;
+    }
+    .form_panel_input {
+        border-radius: 4px;
+        border: 0px;
+        background: white !important;
+        color: $mainT;
+        font-size: 12px;
+        padding: 3px 8px;
+        width: 100%;
+        height: 35px;
+        border: 1px solid #CED4DA;
+        text-transform: uppercase;
+    }
+    .form_panel_upload {
+        border-radius: 4px;
+        border: 0px;
+        color: $mainT !important;
+        font-size: 12px;
+        padding-left: 20px !important;
+        width: 100% !important;
+        height: 35px !important;
+        border: 1px solid #CED4DA;
+        text-transform: uppercase;
+        text-align: left;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .select_panel {
+        width: 100%;
+        height: 35px;
+        background: white;
+        margin-bottom: 20px;
+    }
+    .form_field {
+        height: fit-content;
+        display: inline-block;
+        margin-bottom: 15px;
+        width: 100%;
+    }
+    .listing {
+        height: fit-content;
+        width: 100%;
+        border-radius: 4px;
+        display: inline-block;
+        padding: 8px 10px;
+        margin-bottom: 15px;
+        margin-right: 15px;
+    }
+    .listt {
+        font-size: 11px;
+        margin-bottom: 2px;
+    }
+    .form_field4 .form_panel_input {
+        height: fit-content;
+        margin-bottom: 15px;
+        width: 100%;
+    }
+    .form_field4 .form_panel_inputExtra {
+        height: fit-content;
+        margin-bottom: 15px;
+        width: 100%;
+    }
+    .form_text {
+        max-width: 100%;
+        min-height: 200px;
+        padding: 10px 12px;
+        font-size: 12px;
+        color: $mainT;
+    }
+}

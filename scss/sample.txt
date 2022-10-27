@@ -1,0 +1,90 @@
+Routes per Actions:
+
+• Endorse To Other Department
+    - will put applicant to Received stage                                                              -- DONE
+
+• Keep For Reference
+    - will put applicant to Kept For Reference stage                                                    -- DONE
+
+• Blacklist
+    - will put applicant to blacklisted                                                                 -- DONE
+
+• Reject                                                                                                -- DONE
+    - will reject an applicant
+
+• Online Exam                                                                                           -- DONE
+    - will put applicant to Online Exam stage
+
+• Endorse For Assessment                                                                                -- DONE
+    - will put applicant to Schedule For Assessment stage
+
+• Retake                                                                                                -- DONE
+    - will make applicant retake the exam (back to Online Exam stage)
+
+• Create Schedule                                                                                       -- DONE
+    - will put applicant to Assessment stage
+
+• Update Position                                                                                       -- DONE
+    - will change an applicant's position
+
+• Shortlist                                                                                             -- DONE
+    - will put applicant to Shortlisted stage
+
+• Job Offer                                                                                             -- DONE
+    - will put applicant to JOb Offer stage
+
+• Deploy                                                                                                -- DONE
+    - will put applicant to Deployed stage
+
+• Change Deployed date                                                                                  -- DONE
+    - will change applicant's deployment date
+
+• Rate IAF                                                                                              -- DONE
+    - will put applicant to Pending For Review stage
+
+• Add Referral                                                                                          -- DONE
+    - tag/add referral Form to an applicant
+
+• Return Applicant                                                                                      -- DONE
+    - will put applicant to a selected stage (will update applicant's stage from Kept for Reference)
+
+• View Exam Results         (Default in Applicant details modal)
+• View IQBE Results         (Default in Applicant details modal)
+• View Application Form     (Default in Applicant details modal)
+
+       
+
+172.16.4.182:5095 - RecTrack API (new - testing server)
+
+172.16.4.182:7777 - RecTrack API (current - testing server)
+
+172.16.4.182:2011 - RecTrack (current - testing server)
+
+192.168.59.251:3001 - Jeonsoft
+
+mail.biotechfarms.net -Zimbra
+
+192.168.33.153 -Zimbra 
+
+192.168.34.126 - EGPS
+
+172.16.4.153:8080 - Jira software
+
+172.16.4.153:8090 - Confluence
+
+172.16.4.154:7990 - Bitbucket
+
+172.16.4.156 - @bfi4 - putty access with port 22: for RMRS Mobile App repo (fdroid)
+
+172.16.4.156:3000 - RocketChat
+
+94.237.65.245:4057 - RMRS API (support server)
+
+94.237.65.245:8223 - FDSS API (support server)
+
+rmrs.biotechfarms.net - RMRS (production server)
+
+fdss.biotechfarms.net - FDSS (production server)
+
+
+
