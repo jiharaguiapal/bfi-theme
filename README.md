@@ -1,4 +1,4 @@
-# bfi-rectrack-style
+# bfi-theme-colors-font
 
 ## Install
 
