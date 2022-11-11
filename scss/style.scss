@@ -13,6 +13,18 @@
 
 
 
+
+$theme-colors:(
+  "bfi-success":#00A651,
+  "bfi-danger":#E84D2E,
+  "bfi-warning":#FEC006,
+  "bfi-edit":#EE8400,
+  "bfi-text":#363636,
+  "bfi-subtext":#193C2A,
+ 
+  );
+
+
 @font-face {
   font-family: font_R;
   src: url(red-hat-display.ttf);
@@ -33,48 +45,49 @@
   src: url(red-hat-display-black.ttf);
 }
 
-* {
-  box-sizing: border-box;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  // color: #303030;
-  // color: #555555;
+// * {
+//   box-sizing: border-box;
+//   -webkit-font-smoothing: antialiased;
+//   -moz-osx-font-smoothing: grayscale;
+//   // color: #303030;
+//   // color: #555555;
 
-  user-select: none;
-  /* supported by Chrome and Opera */
-  -webkit-user-select: none;
-  /* Safari */
-  -khtml-user-select: none;
-  /* Konqueror HTML */
-  -moz-user-select: none;
-  /* Firefox */
-  -ms-user-select: none;
-  /* Internet Explorer/Edge */
-  font-family: font_R;
-  outline-width: 0;
-  outline-style: none;
-  border: 0px;
-}
+//   user-select: none;
+//   /* supported by Chrome and Opera */
+//   -webkit-user-select: none;
+//   /* Safari */
+//   -khtml-user-select: none;
+//   /* Konqueror HTML */
+//   -moz-user-select: none;
+//   /* Firefox */
+//   -ms-user-select: none;
+//   /* Internet Explorer/Edge */
+//   font-family: font_R;
+//   outline-width: 0;
+//   outline-style: none;
+//   border: 0px;
+// }
 
-html,
-body {
-  margin: 0px;
-  padding: 0px;
+// html,
+// body {
+//   margin: 0px;
+//   padding: 0px;
   
-}
+// }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0px;
-}
+// h1,
+// h2,
+// h3,
+// h4,
+// h5,
+// h6 {
+//   margin: 0px;
+// }
 
 $BFI1: #00a651;
 $BFI2: #a6ce39;
 $BG: #eff8f4;
+
 
 $mainT: #193C2A;
 $subT: #6d7571;
