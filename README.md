@@ -17,7 +17,7 @@ Note that installing as a dev dependency --save-dev or -D will not work correctl
 Go to nuxt.config.js
 Add to global css
 
-    css: ["./node_modules/bfi-style/scss/style.scss"],
+    css: ["./node_modules/bfi-theme/scss/style.scss"],
     plugins: [],
 
 
