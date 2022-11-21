@@ -24,6 +24,17 @@ Note that bfi-colors should be imported first before bootstrap.
 @import "../node_modules/bfi-colors/scss/style";
 @import "../node_modules/bootstrap/scss/bootstrap";
 ```
+```
+Go to nuxt.config.js
+
+Then import custom.scss as global css
+```
+
+```js live=true
+css: ["@/assets/custom.scss"],
+```
+![nuxt](scss/nuxt-add-css.png)
+
 <!-- 
 ```css live=true
 
