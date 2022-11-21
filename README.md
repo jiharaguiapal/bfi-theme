@@ -14,15 +14,29 @@ Note that installing as a dev dependency --save-dev or -D will not work correctl
 ### Usage
 
 ```
-Go to nuxt.config.js
-Add to global css
+Create custom.scss file inside your assets folder
 
-    css: ["./node_modules/bfi-colors/scss/style.scss"],
-    plugins: [],
+Add this lines to your custom.scss
 
+@import "../node_modules/bfi-colors/scss/style";
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+Note that bfi-colors should be imported first before bootstrap.
 
 ```
+```js live=true
+@import "../node_modules/bfi-colors/scss/style";
+@import "../node_modules/bootstrap/scss/bootstrap";
+```
+```css live=true
 
+  "bfi-success":#00A651,
+  "bfi-danger":#E84D2E,
+  "bfi-warning":#FEC006,
+  "bfi-edit":#EE8400,
+  "bfi-text":#363636,
+  "bfi-subtext":#193C2A,
+```
 <!-- ### Compiles and minifies for production
 
 ```
