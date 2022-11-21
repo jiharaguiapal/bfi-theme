@@ -26,6 +26,11 @@ Note that bfi-colors should be imported first before bootstrap.
 ```
 ### Usage
 
+![theme-colors](scss/theme-colors.png)
+
+###Colors
+![theme-colors](scss/sample use.png)
+
 ```css live=true
 
   "bfi-success":#00A651,
