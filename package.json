@@ -1,7 +1,7 @@
 {
   "name": "bfi-colors",
   "description": "Colors and fonts for BFI",
-  "version": "0.2.12",
+  "version": "0.2.13",
   "private": false,
   "keywords": [
     "css",
@@ -17,7 +17,7 @@
   "repository": "https://github.com/jiharaguiapal/publish-test",
   "license": "MIT",
   "files": [
-    "style.scss", "*.ttf"
+    "scss"
   ],
   "scripts": {
     "serve": "vue-cli-service serve",
