@@ -7,7 +7,8 @@ npm install bfi-colors
 ```
 
 ```
-Note that installing as a dev dependency --save-dev or -D will not work correctly.
+Note that installing as a dev dependency --save-dev 
+or -D will not work correctly.
 
 ```
 
@@ -16,7 +17,7 @@ Note that installing as a dev dependency --save-dev or -D will not work correctl
 ```
 Create custom.scss file inside your assets folder
 Add this lines to your custom.scss
-Note that bfi-colors should be imported first before bootstrap.
+Note that bfi-colors should be imported first before bootstrap
 ```
 ```js live=true
 @import "../node_modules/bfi-colors/scss/style";
@@ -45,10 +46,10 @@ css: ["@/assets/custom.scss"],
 
 ### Color Variants
 ```
-Access the customized color variants using the variant property.
-See the list of the custom variant name below.
+Access the customized color variants using the variant property
+See the list of the custom variant names below
 Also, Bootstrap's default variants can still be 
-accessed using default variant names.
+accessed using default variant names
 ```
 ### Sample Usage
 
