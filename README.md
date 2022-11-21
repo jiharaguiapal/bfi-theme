@@ -11,23 +11,21 @@ Note that installing as a dev dependency --save-dev or -D will not work correctl
 
 ```
 
-### Usage
+### Installation
 
 ```
 Create custom.scss file inside your assets folder
 
 Add this lines to your custom.scss
 
-@import "../node_modules/bfi-colors/scss/style";
-@import "../node_modules/bootstrap/scss/bootstrap";
-
 Note that bfi-colors should be imported first before bootstrap.
-
 ```
 ```js live=true
 @import "../node_modules/bfi-colors/scss/style";
 @import "../node_modules/bootstrap/scss/bootstrap";
 ```
+### Usage
+
 ```css live=true
 
   "bfi-success":#00A651,
