@@ -15,9 +15,7 @@ Note that installing as a dev dependency --save-dev or -D will not work correctl
 
 ```
 Create custom.scss file inside your assets folder
-
 Add this lines to your custom.scss
-
 Note that bfi-colors should be imported first before bootstrap.
 ```
 ```js live=true
@@ -26,7 +24,6 @@ Note that bfi-colors should be imported first before bootstrap.
 ```
 ```
 Go to nuxt.config.js
-
 Then import custom.scss as global css
 ```
 
@@ -45,14 +42,22 @@ css: ["@/assets/custom.scss"],
   "bfi-text":#363636,
   "bfi-subtext":#193C2A,
 ``` -->
-### Color preview
 
-![theme-colors](https://github.com/jiharaguiapal/bfi-theme/blob/main/scss/theme-colors.png)
-
+### Color Variants
+```
+Access the customized color variants using the variant property.
+See the list of the custom variant name below.
+Also, Bootstrap's default variants can still be 
+accessed using default variant names.
+```
 ### Sample Usage
 
 ![snippet](https://github.com/jiharaguiapal/bfi-theme/blob/main/scss/snippet.png)
 
+
+### Custom Variant Names
+
+![theme-colors](https://github.com/jiharaguiapal/bfi-theme/blob/main/scss/theme-colors.png)
 
 <!-- ### Compiles and minifies for production
 
