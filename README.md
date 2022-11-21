@@ -33,7 +33,7 @@ Then import custom.scss as global css
 ```js live=true
 css: ["@/assets/custom.scss"],
 ```
-![nuxt](scss/nuxt-add-css.png)
+![nuxt](https://github.com/jiharaguiapal/bfi-theme/blob/main/scss/nuxt-add-css.png)
 
 <!-- 
 ```css live=true
