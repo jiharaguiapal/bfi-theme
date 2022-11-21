@@ -1,7 +1,7 @@
 {
   "name": "bfi-colors",
   "description": "Colors and fonts for BFI",
-  "version": "0.2.18",
+  "version": "0.2.19",
   "private": false,
   "keywords": [
     "css",
@@ -14,7 +14,11 @@
     "name": "Jihara Guiapal",
     "email": "jiharaguiapal1772@gmail.com"
   },
-  "repository": "https://github.com/jiharaguiapal/publish-test",
+  "repository":{
+    "type" : "git",
+    "url" : "git+https://github.com/jiharaguiapal/publish-test"
+  }, 
+  
   "license": "MIT",
   "files": [
     "scss"

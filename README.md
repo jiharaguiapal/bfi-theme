@@ -24,12 +24,6 @@ Note that bfi-colors should be imported first before bootstrap.
 @import "../node_modules/bfi-colors/scss/style";
 @import "../node_modules/bootstrap/scss/bootstrap";
 ```
-### Usage
-
-![theme-colors](scss/theme-colors.png)
-
-
-![theme-colors](snippet.png)
 
 ```css live=true
 
@@ -40,6 +34,15 @@ Note that bfi-colors should be imported first before bootstrap.
   "bfi-text":#363636,
   "bfi-subtext":#193C2A,
 ```
+### Color preview
+
+![theme-colors](scss/theme-colors.png)
+
+### Sample Usage
+
+![snippet](scss/snippet.png)
+
+
 <!-- ### Compiles and minifies for production
 
 ```
