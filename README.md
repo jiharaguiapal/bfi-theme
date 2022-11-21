@@ -28,8 +28,8 @@ Note that bfi-colors should be imported first before bootstrap.
 
 ![theme-colors](scss/theme-colors.png)
 
-###Colors
-![theme-colors](scss/sample use.png)
+
+![theme-colors](snippet.png)
 
 ```css live=true
 
