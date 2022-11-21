@@ -1,7 +1,7 @@
 {
   "name": "bfi-colors",
   "description": "Colors and fonts for BFI",
-  "version": "0.2.20",
+  "version": "0.2.21",
   "private": false,
   "keywords": [
     "css",

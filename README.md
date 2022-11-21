@@ -36,11 +36,11 @@ Note that bfi-colors should be imported first before bootstrap.
 ``` -->
 ### Color preview
 
-![theme-colors](scss/theme-colors.png)
+![theme-colors](https://github.com/jiharaguiapal/bfi-theme/blob/main/scss/theme-colors.png)
 
 ### Sample Usage
 
-![snippet](scss/snippet.png)
+![snippet](https://github.com/jiharaguiapal/bfi-theme/blob/main/scss/snippet.png)
 
 
 <!-- ### Compiles and minifies for production
