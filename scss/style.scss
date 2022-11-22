@@ -1,6 +1,8 @@
 
 
 $theme-colors:(
+  "primary":#00a650,
+  "secondary":#3E9F85,
   "bfi-success":#00A651,
   "bfi-success-light":#3E9F85,
   "bfi-apple-green":#A6CE39,
@@ -17,6 +19,73 @@ $theme-colors:(
   "bfi-black":#161d1d 
   );
 
+$BFI1: #00a651;
+$BFI2: #a6ce39;
+$BG: #eff8f4;
+$green: #0d874a;
+$disabled: #e9e9e9 ;
+
+
+$mainT: #193C2A;
+$subT: #6d7571;
+$subT_F: #6d757123;
+$faded: #e9ffe4;
+
+$colPos1: #5ABC44;
+$colPos1_F: #5abc442a;
+$colPos1_H: #3c882b;
+
+$colPos2:#00A651;
+$colPos2_F:#00a6501f;
+$colPos2_H:#007a3b;
+
+$colEdit: #EE8400;
+$colEdit_F: #ee830031;
+$colEdit_H: #c96e00;
+
+$colView:#2F6C82;
+$colView_F:#2f6c8223;
+$colView_H:#1e4e5f;
+
+$colReject: #E84D2E;
+$colReject_F: #e84d2e27;
+$colReject_H: #c4462c;
+
+$colBlacklist: #262C2C;
+$colBlacklist_F: #262c2c25;
+$colBlacklist_H: #161d1d; 
+
+$colKeep: #5c7b7b;
+$colKeep_F: #5c7b7b23;
+$colKeep_H: #405353;
+
+$colAlert: #FEC006;
+$colAlert_F: #fec00650;
+$colAlert_H: #d19d00;
+
+$colInfos: #1fbbeb;
+$colInfos_F: #64dbff48;
+$colInfos_H: #008fbb;
+
+$colAdmin: #a6b8eb;
+$colAdmin_F: #a6bceb48;
+$colAdmin_H: #2854a5;
+
+$colEndo: #eba6dc;
+$colEndo_F: #eba6dc42;
+$colEndo_H: #8a1d72;
+
+$colQuick: #889E81;
+$colQuick_F: #889e813f;
+$colQuick_H: #515e4d;
+
+$colSched: #3E9F85;
+$colSched_F: #3e9f8546;
+$colSched_H: #1e4d40;
+
+$input-focus-border-color: ($green);
+$input-border-color  :(gray);
+$input-disabled-bg: ($disabled);
 
 @font-face {
   font-family: font_R;
