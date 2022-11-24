@@ -29,7 +29,7 @@ Note that bfi-colors should be imported first before bootstrap.
 
 Download font files used in the repository.
 This is important for the package to work.
-[Download Red-Hat-Display here](https://github.com/jiharaguiapal/bfi-theme/tree/main/scss).
+[Download Red-Hat-Display here](https://github.com/jiharaguiapal/red-hat-display-font/archive/refs/heads/fonts.zip).
 After downloading, copy and paste font files inside the assets directory.
 
 ![assets](https://github.com/jiharaguiapal/bfi-theme/blob/main/scss/assets.png)
