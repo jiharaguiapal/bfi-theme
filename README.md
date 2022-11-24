@@ -33,7 +33,7 @@ This is important for the package to work.
 [Download Red-Hat-Display here.](https://github.com/jiharaguiapal/bfi-theme/tree/main/scss)
 After downloading, copy and paste font files inside the assets directory.
 ```
-![assets](https://github.com/jiharaguiapal/bfi-theme/blob/main/scss/nuxt-add-css.png)
+![assets](https://github.com/jiharaguiapal/bfi-theme/blob/main/scss/assets.png)
 
 ```
 Go to nuxt.config.js
