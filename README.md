@@ -17,9 +17,9 @@ Make sure to install Sass
 ### Usage
 
 
-Create custom.scss file inside your assets folder
-Add this lines to your custom.scss
-Note that bfi-colors should be imported first before bootstrap
+Create custom.scss file inside your assets folder.
+Add this lines to your custom.scss.
+Note that bfi-colors should be imported first before bootstrap.
 
 ```js live=true
 @import "../node_modules/bfi-colors/scss/style";
@@ -27,16 +27,15 @@ Note that bfi-colors should be imported first before bootstrap
 ```
 
 
-Download font files used in the repository
-This is important for the package to work
-[Download Red-Hat-Display here](https://github.com/jiharaguiapal/bfi-theme/tree/main/scss)
-After downloading, copy and paste font files inside the assets directory
+Download font files used in the repository.
+This is important for the package to work.
+[Download Red-Hat-Display here](https://github.com/jiharaguiapal/bfi-theme/tree/main/scss).
+After downloading, copy and paste font files inside the assets directory.
 
 ![assets](https://github.com/jiharaguiapal/bfi-theme/blob/main/scss/assets.png)
 
 
-Go to nuxt.config.js
-Then import custom.scss as global css
+Then go to nuxt.config.js and import custom.scss as global css.
 
 
 ```js live=true
@@ -55,15 +54,10 @@ css: ["@/assets/custom.scss"],
   "bfi-subtext":#193C2A,
 ``` -->
 
-### Fonts
-
-Access the customized color variants using the "variant" property
-See the list of the custom variant names below
-
 ### Color Variants
 
-Access the customized color variants using the "variant" property
-See the list of the custom variant names below
+Access the customized color variants using the "variant" property.
+See the list of the custom variant names below.
 
 
 ### Sample Usage
