@@ -26,6 +26,15 @@ Note that bfi-colors should be imported first before bootstrap
 @import "../node_modules/bfi-colors/scss/style";
 @import "../node_modules/bootstrap/scss/bootstrap";
 ```
+
+```
+Download font files used in the repository. 
+This is important for the package to work.
+[Download Red-Hat-Display here.](https://github.com/jiharaguiapal/bfi-theme/tree/main/scss)
+After downloading, copy and paste font files inside the assets directory.
+```
+![assets](https://github.com/jiharaguiapal/bfi-theme/blob/main/scss/nuxt-add-css.png)
+
 ```
 Go to nuxt.config.js
 Then import custom.scss as global css
@@ -47,6 +56,12 @@ css: ["@/assets/custom.scss"],
   "bfi-subtext":#193C2A,
 ``` -->
 
+### Fonts
+```
+Access the customized color variants using the "variant" property
+See the list of the custom variant names below
+
+```
 ### Color Variants
 ```
 Access the customized color variants using the "variant" property
