@@ -107,3 +107,7 @@ $input-disabled-bg: ($disabled);
   src: url(red-hat-display-black.ttf);
 }
 
+$font-family-sans-serif: font_R, font_M, font_B, font_BL !default;
+$font-family-serif:      Georgia, "Times New Roman", Times, serif !default;
+$font-family-monospace:  Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-family-base:       $font-family-sans-serif !default;
