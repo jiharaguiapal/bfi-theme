@@ -1,9 +1,9 @@
-# bfi-theme-colors
+# bfi-font-colors
 
 ## Install
 
 ```
-npm install bfi-colors
+npm install bfi-font-colors
 ```
 
 ### Requirements
@@ -22,7 +22,7 @@ Add this lines to your custom.scss.
 Note that bfi-colors should be imported first before bootstrap.
 
 ```js live=true
-@import "../node_modules/bfi-colors/scss/style";
+@import "../node_modules/bfi-font-colors/scss/style";
 @import "../node_modules/bootstrap/scss/bootstrap";
 ```
 
