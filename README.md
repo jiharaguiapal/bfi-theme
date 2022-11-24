@@ -11,7 +11,7 @@ npm install bfi-colors
 Note that installing as a dev dependency --save-dev 
 or -D will not work correctly.
 
-Make sure to install Sass
+Make sure to install Sass and Sass-loader
 
 
 ### Usage
